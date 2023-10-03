@@ -39,21 +39,21 @@
                     <ul class="d-flex align-items-center">
                         <li class="px-2">
                             <a href="#">
-                                <i class="fa-solid fa-bars text-secondary"></i>
+                                <i class="fa-solid fa-bars text-secondary d-none d-lg-block"></i>
                             </a>
                         </li>
                         <li class="px-2">
                             <a href="#">
-                                <i class="fa-solid fa-circle-question text-secondary"></i>
+                                <i class="fa-solid fa-circle-question text-secondary d-none d-lg-block"></i>
                             </a>
                         </li>
                         <li class="px-2">
                             <a href="#">
-                                <i class="fa-solid fa-ellipsis-vertical text-secondary"></i>
+                                <i class="fa-solid fa-ellipsis-vertical text-secondary d-none d-lg-block"></i>
                             </a>
                         </li>
                         <li>
-                            <div class="dropdown">
+                            <div class="dropdown d-flex">
                                 <button class="btn border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="fa-solid fa-bell text-warning"></i>
                                 </button>
@@ -73,7 +73,31 @@
         <!-- MAIN -->
         <main>
             <!-- SIDE-BAR -->
-            <div id="side-bar" class="bg-black">
+            <div id="side-bar" class="d-flex flex-column justify-content-between align-items-center text-light">
+                <!-- side-bar-top -->
+                <div id="side-top" class="py-4">
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-house icon"></i>
+                            <a class="d-none d-lg-inline-block px-2" href="#">Home</a>
+                        </li>
+                        <li class="py-3">
+                            <i class="fa-solid fa-chart-simple icon"></i>
+                            <a class="d-none d-lg-inline-block px-2" href="#">Stats</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-signal icon"></i>
+                            <a class="d-none d-lg-inline-block px-2" href="#">Signals</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- side-bar-bottom -->
+                <div id="side-bottom" class="py-4">
+                    <i class="fa-solid fa-house"></i>
+                    <a class="d-none d-lg-inline-block px-2" href="#">Admin</a>
+                </div>
+
             </div>
             
             <!-- MAIN-CONTENT -->
