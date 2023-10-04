@@ -49,6 +49,11 @@ a
 	--color-bell: #ff8f00;
 }
 
+.my-bg-secondary
+{
+    background: rgba(0, 0, 0, 0.274);
+}
+
 /* NAVBAR */
 #logo
 {
@@ -85,4 +90,16 @@ a
 {
     width: 35px;
     height: 35px;
+}
+
+/* MAIN-CONTENT */
+/* offcanvas */
+.offcanvas.offcanvas-end
+{
+    width: 100vw;
+}
+@media screen and (min-width:992px){
+    .offcanvas.offcanvas-end{
+        width: 45vw;
+    }
 }

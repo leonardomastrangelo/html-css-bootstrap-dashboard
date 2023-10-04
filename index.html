@@ -83,15 +83,15 @@
                 <!-- side-bar-top -->
                 <div id="side-top" class="py-4">
                     <ul>
-                        <li>
+                        <li class="py-2 px-2">
                             <i class="fa-solid fa-house icon"></i>
                             <a class="d-none d-lg-inline-block px-2" href="#">Home</a>
                         </li>
-                        <li class="py-3">
+                        <li class="py-2 px-2">
                             <i class="fa-solid fa-chart-simple icon"></i>
                             <a class="d-none d-lg-inline-block px-2" href="#">Stats</a>
                         </li>
-                        <li>
+                        <li class="py-2 px-2">
                             <i class="fa-solid fa-signal icon"></i>
                             <a class="d-none d-lg-inline-block px-2" href="#">Signals</a>
                         </li>
@@ -100,8 +100,10 @@
 
                 <!-- side-bar-bottom -->
                 <div id="side-bottom" class="py-4">
-                    <i class="fa-solid fa-gear icon"></i>
-                    <a class="d-none d-lg-inline-block px-2" href="#">Admin</a>
+                    <div class="px-2 py-2">
+                        <i class="fa-solid fa-gear icon"></i>
+                        <a class="d-none d-lg-inline-block px-2" href="#">Admin</a>
+                    </div>
                 </div>
 
             </div>
@@ -111,10 +113,165 @@
 
                 <!-- MAIN-NAV -->
                 <div class="container-fluid bg-primary">
-                    <section id="main-nav" class="row">
-                        <div class="col">1</div>
-                        <div class="col">2</div>
-                        <div class="col">3</div>
+                    <section id="main-nav" class="row flex-column flex-lg-row text-light bg-primary fw-normal pt-2">
+
+                        <!-- offcanva -->
+                        <div class="col col-auto py-2 order-lg-3 me-4">
+                            <span class="align-middle">
+                                Nuovo Studente
+                            </span>
+                            <button class="btn btn-sm border-0 text-light fs-2 py-0" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                                <i class="fa-solid fa-plus fs-6 border p-2 rounded-3 align-middle"></i>
+                            </button>
+
+                            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                                aria-labelledby="offcanvasRightLabel">
+                                <div class="offcanvas-header">
+                                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Inserisci un nuovo studente</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                        aria-label="Close"></button>
+                                </div>
+                                <!-- form -->
+                                <div class="offcanvas-body">
+                                    <div class="containter-fluid">
+                                        <!-- name - email - password -->
+                                        <div class="row">
+                                            <div class="col-12 col-lg-6">
+                                                <form action="#">
+                                                    <div class="mb-3">
+                                                        <label class="form-label" for="name">Nome</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label class="form-label" for="email">Email</label>
+                                                        <div class="input-group">
+                                                            <span class="input-group-text">@</span>
+                                                            <input type="email" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label class="form-label" for="email">Email</label>
+                                                        <div class="input-group">
+                                                            <span class="input-group-text">@</span>
+                                                            <input type="email" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+
+                                            <div class="col-12 col-lg-6">
+                                                <form action="#">
+                                                    <div class="mb-3">
+                                                        <label class="form-label" for="name">Cognome</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label class="form-label" for="password">Password</label>
+                                                        <input type="password" class="form-control">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label class="form-label" for="password">Password</label>
+                                                        <input type="password" class="form-control">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                        <!-- address -->
+                                        <div class="mb-3">
+                                            <label class="form-label" for="indirizzo">Indirizzo</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+
+                                        <!-- location -->
+                                        <div class="row">
+                                            <div class="col-12 col-lg-6 mb-3">
+                                                <label class="form-label" for="città">Città</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+
+                                            <div class="col-12 col-lg-4 mb-3">
+                                                <label class="form-label" for="stato">Stato</label>
+                                                <select class="form-select" aria-label="Default select example">
+                                                    <option>Scegli...</option>
+                                                    <option value="1">Italia</option>
+                                                    <option value="2">Burundi</option>
+                                                    <option value="3">Turkmenistan</option>
+                                                    <option value="3">Angelina Jolie</option>
+                                                    <option value="3">Pasta al pesto</option>
+                                                  </select>
+                                            </div>
+
+                                            <div class="col-12 col-lg-2">
+                                                <label class="text-uppercase form-label" for="cap">cap</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+
+                                        <!-- foto -->
+                                        <div class="mb-3">
+                                            <label class="form-label" for="foto">Foto</label>
+                                            <input type="file" class="form-control">
+                                        </div>
+
+                                        <!-- check -->
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Seleziona per proseguire
+                                            </label>
+                                        </div>
+
+                                        <!-- buttons -->
+                                        <button type="submit" class="btn btn-primary">Salva</button>
+                                        <button type="reset" class="btn btn-warning">Reset</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- breadcrumbs -->
+                        <div class="col py-2 order-lg-1">
+                            <div>
+                                <!-- title -->
+                                <h1 class="display-6 fw-medium d-inline-block pe-2">Boolean</h1>
+                                <span class="badge rounded-pill my-bg-secondary px-2">Piano blaze</span>
+                            </div>
+
+                            <nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item">
+                                        <a class="text-light badge rounded-pill my-bg-secondary" href="#">Home</a>
+                                        <i class="fa-solid fa-angles-right"></i>
+                                    </li>
+                                    <li class="breadcrumb-item text-center ps-0 d-lg-none">
+                                        <a class="text-light badge rounded-pill my-bg-secondary" href="#">+</a>
+                                    </li>
+                                    <li class="breadcrumb-item ps-1 d-none d-lg-inline-block">
+                                        <a class="text-light badge rounded-pill my-bg-secondary" href="#">Home</a>
+                                    </li>
+                                    <li class="breadcrumb-item ps-0 d-none d-lg-inline-block">
+                                        <a class="text-light badge rounded-pill my-bg-secondary" href="#">Home</a>
+                                    </li>
+                                    <li class="breadcrumb-item ps-0 d-none d-lg-inline-block">
+                                        <a class="text-light badge rounded-pill my-bg-secondary" href="#">Home</a>
+                                    </li>
+                                </ol>
+                            </nav>
+                        </div>
+                        
+                        <!-- online-counter -->
+                        <div class="col py-2 order-lg-2">
+                            <div>
+                                Studenti online negli ultimi 30 minuti
+                            </div>
+                            <span class="fs-3">
+                                125
+                            </span>
+                        </div>
+
                     </section>
                 </div>
 
@@ -157,7 +314,8 @@
                                                     <span class="badge text-bg-success">Done</span>
                                                 </td>
                                                 <td class="align-middle text-center text-secondary">
-                                                    <i class="fa-solid fa-pen mx-1 p-2 border border-secondary rounded"></i>
+                                                    <i
+                                                        class="fa-solid fa-pen mx-1 p-2 border border-secondary rounded"></i>
                                                     <i
                                                         class="fa-solid fa-trash mx-1 p-2 border border-secondary rounded"></i>
                                                 </td>
@@ -176,7 +334,8 @@
                                                     <span class="badge text-bg-success">Done</span>
                                                 </td>
                                                 <td class="align-middle text-center text-secondary">
-                                                    <i class="fa-solid fa-pen mx-1 p-2 border border-secondary rounded"></i>
+                                                    <i
+                                                        class="fa-solid fa-pen mx-1 p-2 border border-secondary rounded"></i>
                                                     <i
                                                         class="fa-solid fa-trash mx-1 p-2 border border-secondary rounded"></i>
                                                 </td>
@@ -195,7 +354,8 @@
                                                     <span class="badge text-bg-success">Done</span>
                                                 </td>
                                                 <td class="align-middle text-center text-secondary">
-                                                    <i class="fa-solid fa-pen mx-1 p-2 border border-secondary rounded"></i>
+                                                    <i
+                                                        class="fa-solid fa-pen mx-1 p-2 border border-secondary rounded"></i>
                                                     <i
                                                         class="fa-solid fa-trash mx-1 p-2 border border-secondary rounded"></i>
                                                 </td>
@@ -214,7 +374,8 @@
                                                     <span class="badge text-bg-success">Done</span>
                                                 </td>
                                                 <td class="align-middle text-center text-secondary">
-                                                    <i class="fa-solid fa-pen mx-1 p-2 border border-secondary rounded"></i>
+                                                    <i
+                                                        class="fa-solid fa-pen mx-1 p-2 border border-secondary rounded"></i>
                                                     <i
                                                         class="fa-solid fa-trash mx-1 p-2 border border-secondary rounded"></i>
                                                 </td>
@@ -233,7 +394,8 @@
                                                     <span class="badge text-bg-success">Done</span>
                                                 </td>
                                                 <td class="align-middle text-center text-secondary">
-                                                    <i class="fa-solid fa-pen mx-1 p-2 border border-secondary rounded"></i>
+                                                    <i
+                                                        class="fa-solid fa-pen mx-1 p-2 border border-secondary rounded"></i>
                                                     <i
                                                         class="fa-solid fa-trash mx-1 p-2 border border-secondary rounded"></i>
                                                 </td>
@@ -252,7 +414,8 @@
                                                     <span class="badge text-bg-success">Done</span>
                                                 </td>
                                                 <td class="align-middle text-center text-secondary">
-                                                    <i class="fa-solid fa-pen mx-1 p-2 border border-secondary rounded"></i>
+                                                    <i
+                                                        class="fa-solid fa-pen mx-1 p-2 border border-secondary rounded"></i>
                                                     <i
                                                         class="fa-solid fa-trash mx-1 p-2 border border-secondary rounded"></i>
                                                 </td>
@@ -271,7 +434,8 @@
                                                     <span class="badge text-bg-success">Done</span>
                                                 </td>
                                                 <td class="align-middle text-center text-secondary">
-                                                    <i class="fa-solid fa-pen mx-1 p-2 border border-secondary rounded"></i>
+                                                    <i
+                                                        class="fa-solid fa-pen mx-1 p-2 border border-secondary rounded"></i>
                                                     <i
                                                         class="fa-solid fa-trash mx-1 p-2 border border-secondary rounded"></i>
                                                 </td>
@@ -290,7 +454,8 @@
                                                     <span class="badge text-bg-success">Done</span>
                                                 </td>
                                                 <td class="align-middle text-center text-secondary">
-                                                    <i class="fa-solid fa-pen mx-1 p-2 border border-secondary rounded"></i>
+                                                    <i
+                                                        class="fa-solid fa-pen mx-1 p-2 border border-secondary rounded"></i>
                                                     <i
                                                         class="fa-solid fa-trash mx-1 p-2 border border-secondary rounded"></i>
                                                 </td>
