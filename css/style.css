@@ -103,3 +103,21 @@ a
         width: 45vw;
     }
 }
+
+/* HOVER */
+#side-bar li:hover
+{
+    background-color: rgba(128, 128, 128, 0.668);
+}
+
+#dashboard
+.fa-solid.fa-pen:hover,
+.fa-solid.fa-trash:hover
+{
+    background-color: rgba(128, 128, 128, 0.277);
+}
+
+#main-nav nav ol a:hover
+{
+    background-color: rgba(0, 0, 0, 0.597);
+}
